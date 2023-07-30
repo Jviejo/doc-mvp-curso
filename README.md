@@ -52,4 +52,38 @@ En este repo github
 https://github.com/pthom/northwind_psql
 hay un fichero llamado northwind.sql que contiene el script que hay que ejecutar con un programa como DBeaver.
 
+# Alta en Github, Vercel, AWS
 
+Nos damos de alta en los servicios de Github, Vercel (publicación de web) y AWS
+
+# Javascript intro
+
+Introducción a la programación javascript con nodejs
+
+Creamos un directorio llamados js en el que vamos a meter los programas
+
+Para ejecutar un programa hacemos desde la terminal de vscode
+
+Para que aparezca una terminal en vscode 
+
+Ctrl + Shift + `
+
+O tambien con la opción del menu Terminal -> New Terminal
+
+
+```
+npx nodemon <nombreprograma>
+```
+
+El programa se ejecuta cada vez que cambiamos algo
+
+Shortcut que hemos visto
+
+```
+Ctrl + ` (teclado ingles mac)
+Ctrl + < (teclado spanish mac)
+Option + Shift + F (formatea el código)
+Cmd + S (Save del fichero)
+Cmd + Shift + S (Save all files cambiado)
+Cmd + B (oculta o muestra la ventana del arbol de ficheros)
+```
