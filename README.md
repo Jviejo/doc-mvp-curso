@@ -221,5 +221,4 @@ Pasos para construir un servidor web express.
   })
   ```
 
-# Terminal history
-
+# Terminal history (comando usados)
