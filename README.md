@@ -46,6 +46,8 @@ docker logs pg (nos aparece el log del contenedor pg)
 
 Software multiplataforma para tratar con sql. Se puede configurar para acceder a multiples bases de datos. 
 
+
+
 # Sobre el script para cargar la base de datos northwind
 
 En este repo github 
