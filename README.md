@@ -89,7 +89,7 @@ Cmd + S (Save del fichero)
 Cmd + Shift + S (Save all files cambiado)
 Cmd + B (oculta o muestra la ventana del arbol de ficheros)
 ```
-# Tipos de entornos WEB
+# Tipos de entornos WEB (Dia 2)
 
 ## Server render 
 El servidor accede a base de datos y genera todo el html 
@@ -196,7 +196,6 @@ Con la funcion F12 (fn+F12 en mac), aparece una ventana en el navegador que son 
 
 Tambien si pinchamos en un punto de una pagina con inspect (boton derecho, inspect) podemos acceder al html del elemento seleccionado. Esto nos permite aprender como esta hecho un determinado elemento.
 
-
 # Node JS y Express. 
 
 Express es una servidor muy usado para la construccion de web y apis.
@@ -221,4 +220,6 @@ Pasos para construir un servidor web express.
     res.send("hola")
   })
   ```
+
+# Terminal history
 
