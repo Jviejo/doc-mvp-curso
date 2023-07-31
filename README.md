@@ -1,8 +1,11 @@
-# Sobre la terminal
+# Sobre la terminal (1)
+===========
+
 
 La terminal es un programa básico en el ambito de la programación.
 
 Se usa para interactuar con el sistema. 
+
 
 Con la terminal podemos, por ejemplo, crear contenedores de docker con el comando apropiado
 
