@@ -335,4 +335,109 @@ La aplicacion permitira
    Se podra autenticar con certificado digital 
    Podra ver los datos de los recibos suyos y el estado
 
-   
+5. La autenticacion.
+   Se debe de permitir la autenticacion por usuario / password para los funcionarios
+   La autenticacion para los contribuyente ira por un certificado digital
+
+
+Otras aplicaciones
+
+1. Simulador de banco
+   Aparecera un formulario que pida tarjeta, caducidad, cvc y nombre
+   El simulador recibira los datos siguiente
+      la referencia
+      el importe
+      url_ok
+      url_ko
+  En la simulacion cuando se da cancelar se redigira a la url definida en ko
+  Si va bien se redigira a la url defininda el ok.
+
+2. Aplicacion autenticacion con certificado digital !!!ESTO NO LO HEMOS VISTO HOY
+
+  Se trata de una aplicacion web que exija certificado digital de cliente.
+  Para ello la web tiene que ser accesible via ssl
+  La aplicacion debe de recibir la url de la aplicacion donde hay que redirigir 
+  La aplicacion solicitara al usuario un certificado digital (de la gva, fabrica, dni)
+  La aplicacion leera el certificado y validara que no ha expirado (no haremos ocsp)
+  Si todo el correcto reenviara a la aplicacion origen el subject del certificado
+  En el subject es donde estara en cif, el nombre de la empresa (contribuyente)
+
+## EJERCICIOS
+
+1. Usar un proyecto html para familiarizarse con los componentes de tailwind
+
+
+# Dia 4
+
+## Meter tailwind en nextjs
+
+Esto esta sacado de https://tailwindcss.com/docs/guides/nextjs
+
+Para instalar el tailwind debemos desde el terminal en el directorio del proyecto
+
+```
+yarn add tailwindcss postcss autoprefixer -D
+```
+Luego hacemos 
+```
+npx tailwindcss init -p
+```
+que crea el ficheros tailwind.config.js
+
+Vamos al ficheros tailwind.config.js y sustituimos el elemento content con
+
+```
+content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+ 
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+```
+
+Ahora creamos el fichero globals.css y metemos 
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+# Para publicar en vercel ver si tenemos los scripts
+
+Para publicar en vercel debemos de tener el package.json el apartado scripts definido.
+
+```
+{
+  "name": "nextjs-01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^13.4.12",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.27",
+    "tailwindcss": "^3.3.3"
+  }
+}
+```
+
+Vercel usara next build para construir el proyecto. Build el proyecto significa que hara la descarga de las dependencias y empaquetar los elementos algo que no es necesario en dev.
+
+Vercel usara next start para ejecutar el proyecto.
+
+Esto tardara alrededor de 50 segundos.
+
+Lo que va a realizar vercel es levantar un servidor web como el express para realizar las operaciones.
+
