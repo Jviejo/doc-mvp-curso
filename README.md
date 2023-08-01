@@ -224,4 +224,115 @@ Pasos para construir un servidor web express.
   })
   ```
 
-# Terminal history (comando usados)
+# Dia 3
+
+## Publicacion en Github y Vercel de proyectos.
+
+## Red IP local
+
+Una red domestica habitualmente tiene la direccion 192.168.1.x y el router (que permite acceder a internet) tiene la direccion 192.168.1.1
+
+El router dispone de un servicio llamado DHCP. Cuando un dispositivo arranca no tiene direccion ip y pide una al servicio DHCP, el cual le da una. Normalmente suele ser la misma, pero no tiene por que
+
+Si tenemos un ordenador dentro de la red domestica que tiene servidores y queremos que se pueda acceder a ellos desde el exterior, tenemos que decirle en el router que a un determinado puerto externo le corresponde un puerto interno.
+
+Por ejemplo si tengo un servidor web en la maquina con ip interna (privada) 192.168.1.69 que esta escuchando (listen) en el puerto 3000. Tendremos que decirle a router en la redireccion de puertos que
+
+el puerto externo 80 es el puerto interno 3000 de la maquina 192.168.1.69.
+
+Por otro lado si queremos que se pueda acceder por nombre de dominio concreto, tendremos que ir al dns y crear una entrada en el mismo que diga que el nombre esta asociada a la ip externa del router (la que nos da el operador de comunicaciones). Hecho esto tendremos la posibilidad de hacer http://nombrednsquehemospuest:puertoexterno y esto lo procesara nuestra maquina interna.
+
+El problema es que cuando se va la luz, algunos operadores cambian la ip externa del router y ya no vale la entrada en el dns que hicimos.
+
+Para solucionar este problema podemos usar en nuestra maquina servidora un contenedor llamado 
+
+docker run \
+  -d \
+  --name ddns
+  -e API_KEY=apikeydecloudflare \ (ver en google keep)
+  -e ZONE=kfs.es \
+  -e SUBDOMAIN=*.jvh \
+  oznu/cloudflare-ddns
+
+Este contenedor actualiza la ip del dns cuando esta cambia.
+
+
+Si quisiera saber la ip de mi equipo normalmente haria una busqueda en google "cual es mi ip".
+
+Si lo quiero hacer con un programa podria hacer curl ifconfig.me
+
+## ngrok
+
+Hablamos de pasada que si queriamos publicar un servidor en nuestra maquina que estuviera visible para todo el mundo usariamos ngrok.
+
+https://ngrok.com/
+
+El servicio es gratuito hasta un determinado nivel.
+
+
+## CSS Flex y Grid
+
+Css es la tecnologia para estilizar paginas.
+
+Ya no se usa CSS directamente sino que usamos frameworks entre los que descatan bootstrap y sobre todo tailwind.
+
+Habria que usar tailwind siempre que se pueda. Por otro lado tailwind tiene un servicio de subcripcion de pago unico para toda la vida que permite obtener componentes cuidadosamente disenados para ser usados e html, react o vue.
+
+El servicio esta en https://tailwindui.com/ y las credenciales estan en google keep.
+
+No obstante debemos de conocer la teoria de flex y grid, dos elementos fundamentales en el diseno que van a permitir hacer web responsive.
+
+Para detalles de flex y grid 
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+https://css-tricks.com/snippets/css/complete-guide-grid/
+
+Esta web tiene un monton de detalles sobre css
+
+No es necesario perder mucho tiempo conociendo las bases de flex y grid ya que lo importante son el uso de los componentes de tailwind. (es como el conocimiento de armonia para tocar, es bueno pero no imprescindible)
+
+## proyecto nextjs
+
+Abrimos con el code un directorio vacio en el que con la termminal hacemos yarn init -y
+
+Luego instalamos yarn add react react-dom next
+
+A continuacion creamos una carpeta llamada app (este es el app router) en la que metemos un un fichero llamado page.js (se tiene que llamar asi por el framework)
+
+Ahora dentro del fichero metemos un componente de react (que basicametne es una funcion)
+
+export default function ElNombreQueYoQuiera() {
+  return <p>Hola </p>
+}
+
+
+Para ejecutar el proyecto (que es un webserver que proporciona next)
+
+hacemos desde la terminal npx next dev
+
+Esto escucha en el puerto, normalment4e 3000.
+
+Nos vamos a un navegador con http://localhost:3000 y debemos de ver Hola.
+
+## La aplicacion
+
+Se trata de una aplicacion web que sera usada por tres tipos de roles (admin, funcionario, contribuyente)
+
+La aplicacion permitira
+
+1. Sin autenticarse
+   Realizar la declaracion de la tasa del 1.5 sin autenticarse
+   Pagar la tasa
+   Imprimir el pdf con la Tasa
+   Enviar por correo el documento de la tasa
+2. Autenticado Admin
+   Asignar / Quitar roles a usuarios
+
+3. Autenticado Funcionario
+   Podra ver todas los contribuyentes y las liquidaciones (les llamamos valores)
+   Podra 
+
+4. Autenticado Contribuyente
+   Se podra autenticar con certificado digital 
+   Podra ver los datos de los recibos suyos y el estado
+
+   
