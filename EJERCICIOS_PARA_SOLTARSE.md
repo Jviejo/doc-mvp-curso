@@ -38,8 +38,27 @@ si queremos usar App router (las caracteristicas de la 13)
 
 # Ejercicios
 
-1. Crear proyectos con npx create-next-app@latest nextjs-prueba1 y dar diferentes respueste para ver lo que hace. Ojo que no tengan errores. Probar que funcionan. Dar un vistazo a los ficheros y luego borralos.
+1. Crea un proyecto nextjs from scratch usando el app router con dos pagina Home About
 
-2. Crear un proyecto nextjs con typescript, tailwind  e instalar prisma. Prisma debe de usar sqlite. Seguir esta guia https://mael.app/blog/nextjs-13-app-directory-prisma-3nnl. (Puede haber otras guias). La idea es soltarse con el concepto de ORM usando el modulo prisma.
+2. Crea un proyecto nextjs from scratch y anadele despues tailwind. 
+
+3. Crear proyectos con npx create-next-app@latest nextjs-prueba1 y dar diferentes respueste para ver lo que hace. Ojo que no tengan errores. Probar que funcionan. Dar un vistazo a los ficheros y luego borralos.
+
+4. Crear un proyecto nextjs con typescript, tailwind  e instalar prisma. Prisma debe de usar sqlite. Seguir esta guia https://mael.app/blog/nextjs-13-app-directory-prisma-3nnl. (Puede haber otras guias). La idea es soltarse con el concepto de ORM usando el modulo prisma.
+
+5. Crea un contenedor de postgres que escuche en el puerto 5454. Metele la base de datos northwind usando el cliente dbeaver.
+
+6. Crear un proyecto en Github llamado borrame. Clonarlo en tu local. Borrarlo al final
+
+7. Crear un proyecto en Github llamado borrame. En local con vscode inicializar un repositorio y meterle como url remota la del proyecto github.
+
+8. Hacer un proyecto nextjs y publicarlo en vercel.
+
+9. Modificar el proyecto anterior y actualizar vercel.
+
+10. Crear un base de datos RDS postgres en AWS y conectarla con una aplicacion nextjs
+
+11. Crear una mquina EC2 en AWS y crear un proyecto en dicha maquina usando VSCODE y SSH.
+
 
 
