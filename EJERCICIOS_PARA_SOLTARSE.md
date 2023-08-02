@@ -35,6 +35,13 @@ nos preguntara si queremos typescript, tailwind, eslint (validador de codigo)
 si queremos que meta lo generado en el directorio src
 si queremos usar App router (las caracteristicas de la 13)
 
+# Ejercicios Diseno Tailwind.
+
+1. Componente de lista de productos
+
+2. Componente de presentacion de un producto.
+
+3. Disenar un layout de un ecommerce  con Header, Footer, Menu lateral de Categorias 
 
 # Ejercicios
 
@@ -54,11 +61,22 @@ si queremos usar App router (las caracteristicas de la 13)
 
 8. Hacer un proyecto nextjs y publicarlo en vercel.
 
-9. Modificar el proyecto anterior y actualizar vercel.
+9. Modificar el proyecto anterior y actualizar vercel. Asignar un dominio propio a el dominio. Comprobar que se crea el certificado de servidor.
 
 10. Crear un base de datos RDS postgres en AWS y conectarla con una aplicacion nextjs
 
 11. Crear una mquina EC2 en AWS y crear un proyecto en dicha maquina usando VSCODE y SSH.
 
+12. Crear un componente products en un proyecto reactjs. El componente debe sacar un card por cada producto en el que aparezca una foto, un nombre. Para hacer esto tenemos que crear una base de datos de productos sqlite que tenga una tabla products. Usar los datos de ejemplo de https://diviengine.com/woocommerce-sample-products-csv-import-file-freebie/
 
+13. Generar ficheros csv a partir de las tablas de la base de datos northwind, un fichero por tabla.
 
+14. Importar datos en formato csv a una base de datos. 
+    * https://sample-videos.com/download-sample-csv.php#google_vignette
+    * https://www.datablist.com/learn/csv/download-sample-csv-files#people-dataset
+
+16. Hacer una pull request a un repositorio.
+
+17. En un router domestico redireccionar un puerto externo a uno interno.
+
+18. Hacer un servidor web seguro. Usar ngrok para publicarlo en nuestro local.
