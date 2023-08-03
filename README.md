@@ -420,6 +420,24 @@ export default function RootLayout({ children }) {
   )
 }
 
+# Recapitulacion
+
+El foco es poder realizar un proyecto real con nextjs 13.
+
+Para ello debemos de saber de los siguiente temas:
+
+0. Ir aprendiendo HTML, CSS, JS (PREWORK)
+1. Como crear un proyecto nextjs
+2. Como crear una ruta (page.js y layout)
+3. Crear una funcion de la API
+4. Instalar el prisma para crear una base de datos (https://mael.app/blog/nextjs-13-app-directory-prisma-3nnl)
+5. Meter datos en la base de datos seed.js.
+6. Acceso a datos de un server component de nextjs y renderizar en pantalla.
+7. Hacer una funcion del api que acceda a la base de datos.
+
+
+
+
 
 
 
