@@ -478,3 +478,79 @@ Esto tardara alrededor de 50 segundos.
 
 Lo que va a realizar vercel es levantar un servidor web como el express para realizar las operaciones.
 
+DIA 8-AGOSTO-2023
+
+10:30 Hacemos el test en el que sacamos un 6.x
+
+11:00 Vemos el acceso a la base de datos.
+
+      Vemos el concepto de objetos, como conjunto de propiedades
+      Tambien vemos el array de objetos, que es la esencia del traspaso de datos entre la base de datos y el servidor web. Tambien lo sera entre el front y el back.
+
+      No termino del todo bien, por el asunto de async / await
+
+DIA 9-AGOSTO-2023
+
+11:00 reunion con ironhack sobre la beca de michael page
+
+11:30 Siguiendo con los array de objetos hacemos un server que responde a rutas y en cada una ponemos una sentencia sql. 
+
+En sql vemos select * from customers offset 3 limit 10. Offset indica que se salten 3 registros de la query y limit que se traigan de la base de datos solo 10. Esto se usa para minimizar el trafico de datos entre la base de datos y el servidor.
+
+Hay que tener en cuenta que es una gran instalacion habria, quizas, muchos servidores, pero son una base de datos. Por lo tanto, esta seria un cuello de botella.
+
+Comentamos que en Suma las operaciones de base de datos suelen daran unos 50 ms y es por eso que los tiempos de respuesta son buenos incluso cuando hay muchos usuarios.
+
+Aparece el typescript como una mejora de javascript. Typescript esta gestionado por Microsoft y ahora es trending. Basicamente lo que conseguimos con Typescript es una programacion mucho mas consistente y con menos errores. Hay muchos errores que los tenemos marcados en el editor y que no se propagan a la ejecucion del programa.
+
+Hablamos tambien de la importancia de ver en la consola los errores. En frase de David "El error es amigo". Nos ayuda a ver que tenemos mal. Hay que pensar que el programador esta escribiendo codigo y que comete muchos errores.
+
+El typescript hace que el editor pueda tener mucho mejor intellisense. Pueda indicar al usuario las diferentes opciones. Esto unido al copilot es una ayuda muy buena.
+
+En cuanto a las rutas en el servidor web hablamos de los parametros en los metodos get que permiten pasar parametros.
+
+http://localhost:4444/customer/Spain
+
+
+en el server 
+```
+app.get("/customer/:country , (req, res) => {
+    req.params.country valdra Spain
+
+    ... se omite el resto
+}) 
+```
+
+Tambien hablamos de como hacer una pagina web usando plantillas de handlebars en nodejs.
+
+Handlebars en un sistema de plantillas que mezcla datos y un texto que escribimos en un fichero.
+
+El metodo res.render("nombredelaplantilla", datos)
+
+```
+app.get("/customer/:country , (req, res) => {
+    req.params.country valdra Spain
+    let result = await query.....
+    // la linea siguiente toma una plantilla y la junta con los datos obtenidos de la base de datos
+    res.render("plantilla", result)
+}) 
+
+```
+Documentacion de handlebars
+
+https://handlebarsjs.com/
+
+Comentamos sobre el mundo de las tarjetas perforadas. Comento sobre que hacer un programa que funcionara era cuestion de semanas, cuando ahora es cuestiona de horas o dias.
+
+Tambien de la resistencia de las organizaciones al cambio, debido a la dificultad para cambiar todo y tambien por que en general los trabajadores terminan estando obsoletos en general.
+
+Un analista es aquel que habla con el usuario y define lo que hay que hacer. Un analista normalmente lleva a dos o tres programadores y, a veces, tambien programa. En el caso que programe sistematicamente se le llama analista programador. Tambien existe el modelo 360 o juan palomo que es capaz de dominar todas las tecnologias necesarias para que funcione todo.
+
+# La ruta de aqui a una semana
+
+1. Hacer rutas en el express que devuelvan datos de la base de datos -> mejorara el SQL
+2. Comenzar a realizar templates handlebars para presentar datos en html y css
+3. Algoritmos sobre arrays. El uso de arrays es vital ya que toda la informacion de la base de datos viene en arrays y la informacion que procesan las templates son arrays principalmente. 
+4. Empezar a entender Typescript. Cuando antes se empiece, antes se empezara a disfrutar de sus ventajas.
+
+  
